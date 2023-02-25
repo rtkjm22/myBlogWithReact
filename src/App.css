@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg*, symbol*)) {
+  all: unset;
+  display: revert;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+a,
+button {
+  cursor: revert;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ol,
+ul,
+menu {
+  list-style: none;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+table {
+  border-collapse: collapse;
 }
-
-.card {
-  padding: 2em;
+input,
+textarea {
+  -webkit-user-select: auto;
 }
-
-.read-the-docs {
-  color: #888;
+textarea {
+  white-space: revert;
+}
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+:where(pre) {
+  all: revert;
+}
+::placeholder {
+  color: unset;
+}
+::marker {
+  content: initial;
+}
+:where([hidden]) {
+  display: none;
+}
+:where([contenteditable]:not([contenteditable='false'])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+:where([draggable='true']) {
+  -webkit-user-drag: element;
+}
+:where(dialog:modal) {
+  all: revert;
 }
